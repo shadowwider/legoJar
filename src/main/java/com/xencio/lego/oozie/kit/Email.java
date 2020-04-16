@@ -161,6 +161,7 @@ public class Email {
         props.setProperty("mail.smtp.port",  config.getMailHostPort());
         // 是否要求身份认证
         
+        
         props.setProperty("mail.smtp.auth", config.getMailSmtpAuth());
         props.setProperty("mail.smtp.starttls.enable", config.getMailSmtpStarttls());
         // 创建Session实例对象
