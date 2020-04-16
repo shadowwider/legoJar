@@ -15,6 +15,7 @@ import java.util.Arrays;
 import java.util.Objects;
 import java.util.Properties;
 
+//import com.csvreader.CsvWriter;
 
 public class Email {
 
@@ -149,6 +150,47 @@ public class Email {
         return true;
     }
 
+    /**
+	
+	 
+	private static void generateAttachment(List<BaseCleanError> mismatchItemList) throws IOException {
+
+		List<String[]> csvRowList = new ArrayList<String[]>();
+		String[] atachmentHeadArr = config.getAttachmentHeadArray();
+		csvRowList.add(atachmentHeadArr);
+		CsvWriter csvWriter = null;
+
+		try {
+
+			Charset docCharset = Charset.forName("GBK");
+
+			String timePeriodStr = getTimePeriodStr("yyyyMM");
+			String targetAttachFilePath = MessageFormat.format(ATTACHMENT_LOCAL_PATH, timePeriodStr);
+
+			File attachmentDir = new File("attachment");
+			attachmentDir.mkdir();
+
+			csvWriter = new CsvWriter(targetAttachFilePath, ',', docCharset);
+			csvWriter.writeRecord(atachmentHeadArr);
+
+			for (BaseCleanError bcError : mismatchItemList) {
+				String[] cellContentArray = new String[atachmentHeadArr.length];
+				cellContentArray[0] = bcError.getSourceCode();
+				cellContentArray[1] = bcError.getSource();
+				csvWriter.writeRecord(cellContentArray);
+			}
+
+			csvWriter.flush();
+
+		} catch (Exception e) {
+			log.error("Generate attachment faile : {} , {}", e, e.getMessage());
+		} finally {
+			if (csvWriter != null) {
+				csvWriter.close();
+			}
+		}
+	}
+*/
 
     public static Session buildMailSession() {
 
