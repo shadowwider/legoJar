@@ -1,0 +1,4 @@
+com\xencio\lego\oozie\config\Config.class
+com\xencio\lego\oozie\config\ConfigEmail.class
+com\xencio\lego\oozie\kit\Email.class
+com\xencio\lego\oozie\kit\Kit.class
