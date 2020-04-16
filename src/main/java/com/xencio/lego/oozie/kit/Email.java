@@ -69,7 +69,7 @@ public class Email {
 
             // 邮件主题,并指定编码格式(未指定编码)
             String subject = config.getMailSubject();
-            msg.setSubject(receivers);
+            msg.setSubject(subject);
             // 设置纯文本内容为邮件正文
             String template = config.getMailContentTemplate();
             String mailText = MessageFormat.format(template, Objects.toString(params[0],""), Objects.toString(params[1],""),Objects.toString(params[2],""), Objects.toString(params[3],""), Objects.toString(params[4],""));
